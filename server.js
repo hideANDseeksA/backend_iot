@@ -148,8 +148,8 @@ app.put("/api/location/:id", async (req, res) => {
 const transporter = nodemailer.createTransport({
   service: 'Gmail', // You can use 'Gmail', 'Outlook', etc., or configure an SMTP server
   auth: {
-    user: 'mcsaliksik@gmail.com',
-    pass: 'vubpgxhfuvwbnvde',
+    user: 'persaemergency@gmail.com',
+    pass: 'xrorzyadclwdhihv',
   },
 });
 
@@ -212,7 +212,7 @@ app.post('/api/send-email', async (req, res) => {
 
 const sendEmail = async (to, subject, html) => {
   const mailOptions = {
-    from: 'mcsaliksik@gmail.com',
+    from: 'persaemergency@gmail.com',
     to: to,
     subject: subject,
     html: html,
