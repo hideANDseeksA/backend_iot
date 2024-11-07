@@ -1,0 +1,15 @@
+{
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.21.1",
+    "init": "^0.1.2",
+    "node-cron": "^3.0.3",
+    "nodemailer": "^6.9.16",
+    "pg": "^8.13.1"
+  },
+  "scripts": {
+    "start": "node server.js",
+    "build": "babel src -d lib",
+    "test": "jest"
+  }
+}
