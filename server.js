@@ -254,6 +254,17 @@ app.post("/api/location", async (req, res) => {
 });
 
 
+app.get("/api/notify", async (req, res) => {
+  try {
+    const result = await client.query("SELECT * FROM notify");
+    res.json(result.rows);
+  } catch (error) {
+    console.error("Error fetching location:", error);
+    res.status(500).send("Internal Server Error");
+  }
+});
+
+
 app.listen(PORT, () => {
   console.log(`Server running on http://localhost:${PORT}`);
 });
