@@ -264,6 +264,17 @@ app.get("/api/notify", async (req, res) => {
   }
 });
 
+app.put("/api/update-alert", async (req, res) => {
+  try {
+    await client.query("UPDATE notify SET alert = TRUE WHERE id = 1");
+    console.log("Alert updated successfully");
+    res.status(200).json({ message: "Alert updated successfully" });
+  } catch (error) {
+    console.error("Error updating alert:", error);
+    res.status(500).json({ error: "Error updating alert" });
+  }
+});
+
 
 app.listen(PORT, () => {
   console.log(`Server running on http://localhost:${PORT}`);
